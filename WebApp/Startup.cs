@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Models.DataContext;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -29,6 +33,13 @@ namespace WebApp
 
             //SignalR
             services.AddSignalR();
+
+            //services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(@"C:\temp-keys\"))
+            //    .UseCryptographicAlgorithms(new AuthenticatedEncryptorConfiguration()
+            //    {
+            //        EncryptionAlgorithm = EncryptionAlgorithm.AES_256_CBC,
+            //        ValidationAlgorithm = ValidationAlgorithm.HMACSHA256
+            //    });
 
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             void DbContextOptionsBuilder(DbContextOptionsBuilder builder)
