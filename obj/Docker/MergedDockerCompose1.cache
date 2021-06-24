@@ -1,0 +1,38 @@
+services:
+  web:
+    build:
+      context: D:\Tanvir\docker-kubernetes-net5
+      dockerfile: WebApp/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebApp
+      target: base
+    container_name: docker_net5
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: docker_net5:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/WebApp.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8115
+      target: 80
+    - published: 44301
+      target: 443
+    tty: true
+    volumes:
+    - D:\Tanvir\docker-kubernetes-net5\WebApp:/app:rw
+    - C:\Users\sthossan\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\sthossan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\sthossan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\sthossan\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Tanvir\docker-kubernetes-net5:/src:rw
+version: '3.4'

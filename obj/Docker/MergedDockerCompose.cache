@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: D:\Tanvir\docker-kubernetes-net5
+      dockerfile: WebApp/Dockerfile
+    container_name: docker_net5
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: docker_net5:1.0.1-alpine
+    ports:
+    - published: 8115
+      target: 80
+    - published: 44301
+      target: 443
+    volumes:
+    - C:\Users\sthossan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\sthossan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

@@ -1,0 +1,12 @@
+D:\Tanvir\docker-kubernetes-net5\ViewModels\bin\Debug\net5.0\ViewModels.deps.json
+D:\Tanvir\docker-kubernetes-net5\ViewModels\bin\Debug\net5.0\ViewModels.dll
+D:\Tanvir\docker-kubernetes-net5\ViewModels\bin\Debug\net5.0\ref\ViewModels.dll
+D:\Tanvir\docker-kubernetes-net5\ViewModels\bin\Debug\net5.0\ViewModels.pdb
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.csproj.AssemblyReference.cache
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.AssemblyInfoInputs.cache
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.AssemblyInfo.cs
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.csproj.CoreCompileInputs.cache
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.dll
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ref\ViewModels.dll
+D:\Tanvir\docker-kubernetes-net5\ViewModels\obj\Debug\net5.0\ViewModels.pdb
